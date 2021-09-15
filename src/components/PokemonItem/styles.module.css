@@ -1,0 +1,19 @@
+
+.background{
+    width: 200px;
+    padding: 10px 0;
+    
+    border-radius: 4px;
+    background: #F1D302;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.background + .background{
+    margin-top: 16px;
+}
+
+.name{
+    font-weight: 700;
+}
