@@ -1,11 +1,13 @@
-
-
-function PokemonItem(){
-    return (
-        <div>
-            <h2>Nome do Pokemon</h2>
-        </div>
-    )
+interface IProps {
+  name: string;
 }
 
-export default PokemonItem
+const PokemonItem: React.FC<IProps> = ({ name }) => {
+  return (
+    <div>
+      <h2>{name}</h2>
+    </div>
+  );
+}
+
+export default PokemonItem;
