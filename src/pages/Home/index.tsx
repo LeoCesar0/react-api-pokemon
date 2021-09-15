@@ -1,5 +1,5 @@
 import api from "../../services/api";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import PokemonItem from "../../components/PokemonItem";
 import PokemonLogo from "../../assets/images/pokemon.png"
@@ -27,16 +27,25 @@ function Home() {
     setPokemons(data.results)
   }
 
+    useEffect(() => {
+      getAllPokemons()
+    }, [])
+
   console.log({ pokemons })
 
   return (
     <div className={styles.container}>
       <img src={PokemonLogo} alt="" className={styles.logo} onClick={() => getAllPokemons()} />
       <h1 className={styles.title}>Meu site React</h1>
-      <PokemonItem name="Pikachu" />
-      <PokemonItem name="Charmander" />
-      <PokemonItem name="Bulbasaur" />
-      <PokemonItem name="Onix" />
+      
+      {
+        pokemons ?
+        pokemons?.map((pokemon, index) => (
+          <PokemonItem name={pokemon.name} key={index} />
+        ))
+        : <h1>Carregando...</h1>
+      }
+
     </div>
   );
 }
