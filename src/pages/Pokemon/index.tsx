@@ -17,7 +17,7 @@ interface IPokemon {
     front_default: string;
     other: {
       dream_world: { front_default: string };
-      official_artwork: { front_default: string };
+      "official-artwork": { front_default: string };
     };
   };
 }
@@ -43,11 +43,32 @@ const Pokemon: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h1 className={styles.title} onClick={() => getPokemonData()}>
-        Pagina do pokemon: {pokemonName}
+        {pokemonName}
       </h1>
-      <p>Habilidade: {pokemon?.abilities[0].ability.name}</p>
+      <main className={styles.pokemonCard}>
+        <img
+          src={pokemon?.sprites.other["official-artwork"].front_default}
+          alt={pokemon?.name}
+        />
+
+        <div className={styles.details}>
+          <p className={styles.item}>Specie: {pokemon?.species.name} </p>
+          <p className={styles.item}>
+            Types: {pokemon?.types.map((item) => item.type.name).join(", ")}
+          </p>
+          <p className={styles.item}>
+            Base Experience: {pokemon?.base_experience} XP
+          </p>
+          <p className={styles.item}>Height: {pokemon?.height} (decimetres)</p>
+          <p className={styles.item}>
+            Abilities:{" "}
+            {pokemon?.abilities.map((item) => item.ability.name).join(", ")}
+          </p>
+          <p className={styles.item}>Weight: {pokemon?.weight} (hectograms)</p>
+        </div>
+      </main>
     </div>
   );
 };

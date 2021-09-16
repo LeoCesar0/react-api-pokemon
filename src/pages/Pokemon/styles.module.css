@@ -1,3 +1,43 @@
 .title{
+    margin: 64px 0;
+
     font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #eee;
+    letter-spacing: 5px;
+}
+
+.pokemonCard{
+    width: 100%;
+    margin: 32px 0;
+    padding: 32px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 8px;
+
+    box-shadow: 2px 2px 5px 1px black;
+    background: var(--dark-red);
+}
+
+.details{
+    margin: 20px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.item{
+    font-size: 18px;
+    color: #eee;
+    
+    flex: 1 calc(50% - 20px);
 }

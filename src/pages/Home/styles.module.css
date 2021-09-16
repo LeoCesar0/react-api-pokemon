@@ -1,15 +1,15 @@
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .logo{
-    width: 500px;
+    width: 400px;
+    position: absolute;
+
+    top: -100px;
+    left: 10px;
 }
 
 .title{
+    margin: 80px 0;
     font-size: 32px;
     font-weight: bold;
     color: #eee;
@@ -19,6 +19,23 @@
     font-size: 32px;
 }
 
-.item + .item{
-    margin-top: 16px;
+.pokemons{
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 16px;
 }
+
+.item{
+    flex: 0 1 calc(33% - 16px);
+}
+
+.pokemon_link{
+
+}
+
+
+
+
+

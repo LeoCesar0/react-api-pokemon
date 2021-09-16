@@ -35,24 +35,28 @@ function Home() {
   console.log({ pokemons });
 
   return (
-    <div className={styles.container}>
+    <div className="container">
       <img
         src={PokemonLogo}
         alt=""
         className={styles.logo}
         onClick={() => getAllPokemons()}
       />
-      <h1 className={styles.title}>Meu site React</h1>
+      <h1 className={styles.title}>My Poke API :D</h1>
 
-      {pokemons ? (
-        pokemons?.map((pokemon, index) => (
-          <Link className={styles.item} to={`/${pokemon.name}`} key={index}>
-            <PokemonItem name={pokemon.name} />
-          </Link>
-        ))
-      ) : (
-        <h1 className={styles.loading}>Carregando...</h1>
-      )}
+      <main className={styles.pokemons}>
+        {pokemons ? (
+          pokemons?.map((pokemon, index) => (
+            <div className={styles.item}>
+              <Link className={styles.pokemon_link} to={`/${pokemon.name}`} key={index}>
+                <PokemonItem name={pokemon.name} />
+              </Link>
+            </div>
+          ))
+        ) : (
+          <h1 className={styles.loading}>Loading...</h1>
+        )}
+      </main>
     </div>
   );
 }
