@@ -47,8 +47,8 @@ function Home() {
       <main className={styles.pokemons}>
         {pokemons ? (
           pokemons?.map((pokemon, index) => (
-            <div className={styles.item}>
-              <Link className={styles.pokemon_link} to={`/${pokemon.name}`} key={index}>
+            <div className={styles.item} key={index}>
+              <Link className={styles.pokemon_link} to={`/${pokemon.name}`} >
                 <PokemonItem name={pokemon.name} />
               </Link>
             </div>

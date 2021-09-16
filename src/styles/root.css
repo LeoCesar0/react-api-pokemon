@@ -53,8 +53,7 @@ table {
 	--dark-red: #ca1d23d0;
 	--yellow: #F1D302;
 	--dark-yellow: #E3B23C;
-	--dark-blue: #0E1C36;
-	--light-blue: #BCD2EE;
+	--blue: rgb(43,106,175);
 }
 
 html{

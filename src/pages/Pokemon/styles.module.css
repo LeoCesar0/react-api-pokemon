@@ -41,3 +41,21 @@
     
     flex: 1 calc(50% - 20px);
 }
+
+.button{
+    position: absolute;
+    top:32px;
+    left: 48px;
+    padding: 8px 16px;
+
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: var(--dark-red);
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #eee;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    box-shadow: 2px 2px 1px 1px black;
+}

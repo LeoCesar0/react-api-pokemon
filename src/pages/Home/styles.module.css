@@ -10,9 +10,11 @@
 
 .title{
     margin: 80px 0;
-    font-size: 32px;
+
+    font-size: 64px;
     font-weight: bold;
-    color: #eee;
+    color: white;
+    
 }
 
 .loading{
@@ -29,10 +31,6 @@
 
 .item{
     flex: 0 1 calc(33% - 16px);
-}
-
-.pokemon_link{
-
 }
 
 

@@ -69,6 +69,11 @@ const Pokemon: React.FC = () => {
           <p className={styles.item}>Weight: {pokemon?.weight} (hectograms)</p>
         </div>
       </main>
+
+      <button className={styles.button} onClick={() => {window.location.href = '/'}}>
+        voltar
+      </button>
+
     </div>
   );
 };
