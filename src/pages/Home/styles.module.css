@@ -14,3 +14,11 @@
     font-weight: bold;
     color: #eee;
 }
+
+.loading{
+    font-size: 32px;
+}
+
+.item + .item{
+    margin-top: 16px;
+}

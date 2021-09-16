@@ -10,10 +10,10 @@
     cursor: pointer;
 }
 
-.background + .background{
-    margin-top: 16px;
-}
 
 .name{
     font-weight: 700;
+    color: #333;
+    font-size: 18px;
+    text-transform: uppercase;
 }
